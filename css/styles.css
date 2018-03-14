@@ -236,11 +236,13 @@ p, td, th, li {
 
 /* Masthead */
 .masthead {
+    text-align: center;
     padding: 3rem 0;
 }
 
 @media screen and (min-width: 780px) {
     .masthead {
+        text-align: left;
         padding: 6rem 0;
     }
 }
@@ -351,7 +353,7 @@ p, td, th, li {
 
 /* Badge */
 .badge {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: bold;
     display: inline-block;
     color: white;
