@@ -334,6 +334,10 @@ p, td, th, li {
     padding-top: 2rem;
 }
 
+.update__title {
+    font-size: 3rem;
+}
+
 .update__meta {
     font-weight: bold;
     margin-top: -1.5rem;
@@ -349,6 +353,14 @@ p, td, th, li {
 .backer__img {
     width: 65px;
     height: 65px;
+}
+
+.backer__name {
+    margin: 0;
+}
+
+.backer__meta {
+    font-size: 1.2rem;
 }
 
 /* Badge */
