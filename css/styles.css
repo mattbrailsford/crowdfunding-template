@@ -338,6 +338,7 @@ p, td, th, li {
 
 .stat__label {
     display: block;
+    font-weight: 700;
 }
 
 /* Updates */
