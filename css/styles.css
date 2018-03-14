@@ -206,7 +206,10 @@ p, td, th, li {
 }
 
 /* Reward */
-.reward {
+.reward,
+.reward[disabled],
+.reward[disabled]:hover,
+.reward[disabled]:focus {
     display: block;
     padding: 2rem;
     background-color: rgba(0,0,0,.025);
@@ -232,6 +235,16 @@ p, td, th, li {
 
 .reward + .reward {
     margin-top: 2rem;
+}
+
+.reward[disabled] {
+    cursor: default;
+}
+
+.reward[disabled] *,
+.reward[disabled]:hover *,
+.reward[disabled]:focus *  {
+    color: rgba(0,0,0,.15);
 }
 
 /* Masthead */
