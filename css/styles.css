@@ -280,8 +280,8 @@ p, td, th, li {
 }
 
 .tabs__tab {
-    flex: 0;
-    margin-right: 5px;
+    display: table-cell;
+    padding-right: 5px;
 }
 
 .tabs__tab a {
@@ -312,7 +312,7 @@ p, td, th, li {
 
 @media screen and (min-width: 780px) {
     .tabs {
-        display: flex;
+        display: table;
     }
 
     .tabs__content {
@@ -440,15 +440,18 @@ body {
 @media screen and (min-width: 780px) {
     .content {
         display: flex;
+        position: relative;
     }
 
     .content__main {
         flex: 0 0 66.6%;
+        max-width: 66.6%;
         padding-right: 1rem;
     }
 
     .content__aside {
         flex: 0 0 33.3%;
+        max-width: 33.3%;
         padding-left: 1rem;
     }
 }
@@ -456,10 +459,12 @@ body {
 @media screen and (min-width: 968px) {
     .content__main {
         flex: 0 0 75%;
+        max-width: 75%;
     }
 
     .content__aside {
         flex: 0 0 25%;
+        max-width: 25%;
     }
 }
 
