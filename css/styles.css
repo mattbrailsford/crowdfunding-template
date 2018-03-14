@@ -100,7 +100,7 @@ body {
     color: #333;
 }
 
-h1, h2, h3, h4, h5, h6, .tabs__tab, .stat, .btn {
+h1, h2, h3, h4, h5, h6, .tabs__tab, .stat, .btn, .no-results {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -364,6 +364,15 @@ p, td, th, li {
     margin: -0.5rem 0 -0.5rem .5rem;
     border-radius: 2rem;
     vertical-align: baseline;
+}
+
+/* No results */
+.no-results {
+    color: rgba(0,0,0,.15);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 6rem 0;
 }
 
 /* 
