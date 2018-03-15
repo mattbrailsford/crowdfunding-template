@@ -252,7 +252,7 @@ p, td, th, li {
     color: rgba(0, 0, 0, 0.5);
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: -.5rem;
+    margin-top: -.75rem;
 }
 
 .reward + .reward {
@@ -391,12 +391,11 @@ p, td, th, li {
     height: 65px;
 }
 
-.backer__name {
-    margin: 0;
-}
-
 .backer__meta {
+    color: rgba(0, 0, 0, 0.5);
     font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: -1.75rem;
 }
 
 /* Badge */
