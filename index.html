@@ -51,7 +51,7 @@
                                     <span class="stat__label">Days to go</span>
                                 </p>
                             </div>
-                            <p><button class="btn btn--primary btn--wide">Back this project</button></p>
+                            <p><button class="btn btn--primary btn--wide btn--pledge">Back this project</button></p>
                             <p class="small center">You only have the opportunity to donate to this project before <strong>Saturday Mar 31, 11:59 pm UTC</strong></p>
                             <hr />
                         </div>
@@ -76,15 +76,15 @@
                     <div id="rewards" class="content-block visible-on-mobile">
                         <h2>Rewards</h2>
                         <hr />
-                        <a href="#" class="reward trim">
+                        <a href="#" class="reward trim" data-reward="RWD-100">
                             <h4 class="reward__title">Pledge £100 or more</h4>
                             <p class="reward__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare aliquet nibh, vel laoreet ex pellentesque eget. Vivamus metus massa, pellentesque vitae ipsum sit amet, lobortis laoreet arcu.</p>
                         </a>
-                        <a href="#" class="reward trim">
+                        <a href="#" class="reward trim" data-reward="RWD-200">
                             <h4 class="reward__title">Pledge £200 or more</h4>
                             <p class="reward__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare aliquet nibh, vel laoreet ex pellentesque eget. Vivamus metus massa, pellentesque vitae ipsum sit amet, lobortis laoreet arcu.</p>
                         </a>
-                        <a href="#" class="reward trim">
+                        <a href="#" class="reward trim" data-reward="RWD-300">
                             <h4 class="reward__title">Pledge £300 or more</h4>
                             <p class="reward__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare aliquet nibh, vel laoreet ex pellentesque eget. Vivamus metus massa, pellentesque vitae ipsum sit amet, lobortis laoreet arcu.</p>
                         </a>
@@ -177,7 +177,7 @@
                         <span class="stat__value">17</span>
                         <span class="stat__label">Days to go</span>
                     </p>
-                    <p><button class="btn btn--primary btn--wide">Back this project</button></p>
+                    <p><button class="btn btn--primary btn--wide btn--pledge">Back this project</button></p>
                     <p class="small center">You only have the opportunity to donate to this project before <strong>Saturday Mar 31, 11:59 pm UTC</strong></p>
                     <hr />
                     <h3>Author</h3>
@@ -186,22 +186,25 @@
                             <img src="https://avatars2.githubusercontent.com/u/527305?s=460&v=4" alt="" class="author__img" />
                         </div>
                         <div class="media__body">
-                            <h4 class="author__title">Matt Brailsford</h4>
-                            <p class="author__subtitle">Web Developer</p>
+                            <h4 class="author__name">Matt Brailsford</h4>
+                            <p class="author__description">Web Developer</p>
                         </div>
                     </div>
                     <hr />
                     <h3>Rewards</h3>
-                    <a href="#" class="reward trim" disabled>
-                        <h4 class="reward__title">Pledge £100 or more</h4>
+                    <a href="#" class="reward trim"  data-reward="RWD-100" disabled>
+                        <h4 class="reward__name">The bronze plan</h4>
+                        <p class="reward__amount">Pledge £100 or more</p>
                         <p class="reward__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare aliquet nibh, vel laoreet ex pellentesque eget. Vivamus metus massa, pellentesque vitae ipsum sit amet, lobortis laoreet arcu.</p>
                     </a>
-                    <a href="#" class="reward trim">
-                        <h4 class="reward__title">Pledge £200 or more</h4>
+                    <a href="#" class="reward trim"  data-reward="RWD-200">
+                            <h4 class="reward__name">The silver plan</h4>
+                            <p class="reward__amount">Pledge £200 or more</p>
                         <p class="reward__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare aliquet nibh, vel laoreet ex pellentesque eget. Vivamus metus massa, pellentesque vitae ipsum sit amet, lobortis laoreet arcu.</p>
                     </a>
-                    <a href="#" class="reward trim">
-                        <h4 class="reward__title">Pledge £300 or more</h4>
+                    <a href="#" class="reward trim"  data-reward="RWD-300">
+                            <h4 class="reward__name">The gold plan</h4>
+                            <p class="reward__amount">Pledge £300 or more</p>
                         <p class="reward__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare aliquet nibh, vel laoreet ex pellentesque eget. Vivamus metus massa, pellentesque vitae ipsum sit amet, lobortis laoreet arcu.</p>
                     </a>
                 </aside>
@@ -213,6 +216,94 @@
             &copy; Copyright 2018 Outfield Digital / All rights reserved
         </div>
     </footer>
+    <div class="modal"><div class="modal__body">
+        <div>
+            <form>
+                <fieldset>
+                    <h3>Personal Details</h3>
+                    <hr />
+                    <div class="columns columns--collapse">
+                        <div class="column">
+                            <div class="form__field">
+                                <label for="name">Name</label>
+                                <input type="text" />
+                            </div>
+                            <div class="form__field">
+                                <label for="name">Email</label>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="form__field">
+                                <label for="name">Reward</label>
+                                <select name="reward">
+                                    <option value="">No reward, just donate</option>
+                                    <option value="RWD-100">£100</option>
+                                    <option value="RWD-200">£200</option>
+                                    <option value="RWD-300">£300</option>
+                                </select>
+                            </div>
+                            <div class="form__field">
+                                <label for="name">Amount</label>
+                                <input type="number" />
+                            </div>                          
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <label for="name">Message</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="form__field">
+                        <label><input type="checkbox" /> Remain Anonymous</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <h3>Billing Details</h3>
+                    <hr />
+                    <div class="columns columns--collapse">
+                        <div class="column">
+                            <div class="form__field">
+                                <label for="name">Card Number</label>
+                                <input type="text" />
+                            </div>
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="form__field">
+                                        <label for="name">Expiry Date</label>
+                                        <input type="text" placeholder="MM/YY" />
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="form__field">
+                                        <label for="name">CVC</label>
+                                        <input type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="form__field">
+                                <label for="name">Country</label>
+                                <select>
+                                    <option>United Kingdom</option>
+                                    <option>£100</option>
+                                </select>
+                            </div>    
+                            <div class="form__field">
+                                <label for="name">Postal Code</label>
+                                <input type="text" />
+                            </div>                        
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form__buttons">
+                    <button class="btn modal__cancel">Cancel</button>
+                    <button class="btn btn--primary">Submit</button>
+                </div>
+            </form>
+        </div></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
