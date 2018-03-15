@@ -312,10 +312,10 @@ p, td, th, li {
     font-size: 14px;
     text-decoration: none;
     white-space: nowrap;
-    padding: calc(2rem - 5px) 2rem;
+    padding: 1.5rem 2rem;
     background-color: rgba(0,0,0,.025);
-    border-top: solid 5px transparent;
-    border-bottom: solid 5px transparent;
+    border-top: solid .5rem transparent;
+    border-bottom: solid .5rem transparent;
 }
 
 .tabs__tab a:hover,
@@ -459,6 +459,7 @@ p, td, th, li {
     max-height: 100%;
     overflow: auto;
     vertical-align: middle;
+    border-top: solid .5rem #22bd7a;
 }
 
 @media screen and (min-width: 740px) {
