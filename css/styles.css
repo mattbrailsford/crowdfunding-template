@@ -126,6 +126,12 @@ h4 {
     font-size: 1.6rem;
 }
 
+h6 {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 p, td, th, li {
     line-height: 1.5;
 }
@@ -243,15 +249,16 @@ p, td, th, li {
 .reward__name,
 .reward__amount,
 .reward__description {
-    color: #333;
     margin: 0 0 1rem;
     transition: color 0.25s ease;
 }
 
+.reward__name,
+.reward__description {
+    color: #333;
+}
+
 .reward__amount {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 1.2rem;
-    font-weight: bold;
     margin-top: -.75rem;
 }
 
@@ -392,9 +399,6 @@ p, td, th, li {
 }
 
 .backer__meta {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 1.2rem;
-    font-weight: bold;
     margin-top: -1.75rem;
 }
 
