@@ -857,22 +857,13 @@ body {
     }
 }
 
-.footer--primary ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer--primary li {
-    margin-bottom: .2rem;
-}
-
-.footer--primary ul li a,
+.footer--primary a,
 .footer--primary p {
     color: rgba(255,255,255,.5);
 }
 
-.footer--primary ul li a:hover,
-.footer--primary ul li a:focus {
+.footer--primary a:hover,
+.footer--primary a:focus {
     color: #22bd7a;
 }
 
