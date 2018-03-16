@@ -155,10 +155,6 @@ p, td, th, li {
     text-align: right;
 }
 
-.no-scroll {
-    overflow: hidden;
-}
-
 /* 
 ** ==================================================
 ** COMPONENTS
@@ -488,6 +484,14 @@ p, td, th, li {
 
 .modal__btns .btn {
     margin-left: .5rem;
+}
+
+html.modal-open {
+    overflow: hidden;
+}
+
+html.modal-open .modal {
+    display: block;
 }
 
 /* Form */

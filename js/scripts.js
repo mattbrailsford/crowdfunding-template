@@ -15,8 +15,7 @@ $(function(){
         if ($(this).is(':not([disabled])')) {
             var reward = $(this).data('reward');
             $('.pledge__form select[name=reward]').val(reward).change();
-            $('html').addClass('no-scroll');
-            $('.modal').show();
+            $('html').addClass('modal-open');
         }
     })
 
@@ -24,11 +23,9 @@ $(function(){
     $('.modal__cancel').on('click', function (e) {
         e.preventDefault();
         // Hide the modal
-        $('html').removeClass('no-scroll');
-        $('.modal').hide();
+        $('html').removeClass('modal-open');
         // Reset the form
         $('.pledge__form')[0].reset()
-        $('.pledge__form .dirty').removeClass('dirty');
         // Show/hide form and thank you message
         $('.pledge__form').show();
         $('.pledge__thank-you').hide();
@@ -56,5 +53,8 @@ $(function(){
     $('form input, form select, form textarea').on('blur valid invalid', function() {
         $(this).addClass('dirty');
     });
+    $('form').on('reset', function () {
+        $(this).find('.dirty').removeClass('dirty');
+    })
 
 });
