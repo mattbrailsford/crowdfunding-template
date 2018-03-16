@@ -10,12 +10,14 @@ $(function(){
     })
 
     // Show pledge dialog
-    $('.btn--pledge:not([disabled]), .reward:not([disabled])').on('click', function (e) {
+    $('.btn--pledge, .reward').on('click', function (e) {
         e.preventDefault();
-        var reward = $(this).data('reward');
-        $('.pledge__form select[name=reward]').val(reward).change();
-        $('html').addClass('no-scroll');
-        $('.modal').show();
+        if ($(this).is(':not([disabled])')) {
+            var reward = $(this).data('reward');
+            $('.pledge__form select[name=reward]').val(reward).change();
+            $('html').addClass('no-scroll');
+            $('.modal').show();
+        }
     })
 
     // Hide pledge dialog
