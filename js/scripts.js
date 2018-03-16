@@ -54,7 +54,10 @@ $(function(){
         $(this).addClass('dirty');
     });
     $('form').on('reset', function () {
-        $(this).find('.dirty').removeClass('dirty');
+        var form = this;
+        setTimeout(function (){ 
+            $(form).find('.dirty').removeClass('dirty');
+        }, 1)
     })
 
 });
