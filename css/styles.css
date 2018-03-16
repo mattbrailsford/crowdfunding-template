@@ -77,6 +77,9 @@ img.fill {
     margin-bottom: 0;
 }
 
+.hidden {
+    display: none;
+}
 
 /* 
 ** ==================================================
@@ -463,6 +466,7 @@ p, td, th, li {
     overflow: auto;
     vertical-align: middle;
     border-top: solid .5rem #22bd7a;
+    white-space: normal;
 }
 
 @media screen and (min-width: 740px) {
@@ -476,13 +480,13 @@ p, td, th, li {
     padding: 2rem;
 }
 
-.modal__buttons {
+.modal__btns {
     text-align: right;
     border-top: solid 1px rgba(0,0,0,.05);
     padding-top: 2rem;
 }
 
-.modal__buttons .btn {
+.modal__btns .btn {
     margin-left: .5rem;
 }
 
@@ -494,6 +498,7 @@ form label {
 }
 
 form input[type=text],
+form input[type=email],
 form input[type=number],
 form textarea,
 form select {

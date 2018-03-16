@@ -219,9 +219,9 @@
             &copy; Copyright 2018 Outfield Digital / All rights reserved
         </div>
     </footer>
-    <div class="modal"><div class="modal__body">
-        <div>
-            <form>
+    <div class="modal">
+        <div class="modal__body"><div>
+            <form class="pledge__form">
                 <fieldset>
                     <h3>Personal Details</h3>
                     <hr />
@@ -229,26 +229,26 @@
                         <div class="column">
                             <div class="form__field">
                                 <label for="name">Name</label>
-                                <input type="text" />
+                                <input type="text" name="name" required />
                             </div>
                             <div class="form__field">
-                                <label for="name">Email</label>
-                                <input type="text" />
+                                <label for="email">Email</label>
+                                <input type="email" name="email" required />
                             </div>
                         </div>
                         <div class="column">
                             <div class="form__field">
                                 <label for="name">Reward</label>
                                 <select name="reward">
-                                    <option value="">No reward, just donate</option>
-                                    <option value="RWD-100">£100</option>
-                                    <option value="RWD-200">£200</option>
-                                    <option value="RWD-300">£300</option>
+                                    <option value="" data-amount="0">No reward, just donate</option>
+                                    <option value="RWD-100" data-amount="100">£100</option>
+                                    <option value="RWD-200" data-amount="200">£200</option>
+                                    <option value="RWD-300" data-amount="300">£300</option>
                                 </select>
                             </div>
                             <div class="form__field">
-                                <label for="name">Amount</label>
-                                <input type="number" />
+                                <label for="amount">Amount</label>
+                                <input type="number" name="amount" required />
                             </div>                          
                         </div>
                     </div>
@@ -299,11 +299,20 @@
                         </div>
                     </div>
                 </fieldset>
-                <div class="modal__buttons">
+                <div class="modal__btns">
                     <button class="btn modal__cancel">Cancel</button>
-                    <button class="btn btn--primary">Submit</button>
+                    <button class="btn btn--primary pledge__submit">Submit</button>
                 </div>
             </form>
+            <div class="pledge__thank-you hidden">
+                <p class="center"><img src="img/tick.png" /></p>
+                <h3 class="center">Thank you for your pledge</h3>
+                <p class="large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis nisl hendrerit, lobortis elit luctus, ultrices tellus. Nulla non consectetur nunc, at tempor justo.</p>
+                <p>Nunc pulvinar tellus lacus, quis tempus felis scelerisque ac. Maecenas vulputate enim eget dolor maximus, vel tempus ex laoreet. In consequat, risus et vulputate luctus, magna magna fermentum nisl, eget porttitor ipsum diam ut elit. Mauris id justo efficitur, sollicitudin magna in, porttitor justo. Curabitur gravida porttitor est, id ultrices risus accumsan ac.</p>
+                <div class="modal__btns">
+                    <button class="btn btn--primary modal__cancel">Close</button>
+                </div>
+            </div>
         </div></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>

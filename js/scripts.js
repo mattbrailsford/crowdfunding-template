@@ -13,7 +13,7 @@ $(function(){
     $('.btn--pledge:not([disabled]), .reward:not([disabled])').on('click', function (e) {
         e.preventDefault();
         var reward = $(this).data('reward');
-        $('select[name=reward]').val(reward);
+        $('.pledge__form select[name=reward]').val(reward).change();
         $('html').addClass('no-scroll');
         $('.modal').show();
     })
@@ -21,8 +21,29 @@ $(function(){
     // Hide pledge dialog
     $('.modal__cancel').on('click', function (e) {
         e.preventDefault();
+        // Hide the modal
         $('html').removeClass('no-scroll');
         $('.modal').hide();
+        // Reset the form
+        $('.pledge__form')[0].reset()
+        // Show/hide form and thank you message
+        $('.pledge__form').show();
+        $('.pledge__thank-you').hide();
     })
+
+    // Handle pledge button click
+    $('.pledge__submit').on('click', function (e) {
+        e.preventDefault();
+        // TODO: Peform the pledge action
+        $('.pledge__form').hide();
+        $('.pledge__thank-you').show();
+    })
+
+    // Listen for changes to reward dropdown and auto update amount field
+    $('.pledge__form select[name=reward]').on('change', function () {
+        var opt = $(this).find('option[value="'+ $(this).val() + '"]');
+        var amt = Number('0' + opt.data('amount'));
+        $('.pledge__form input[name=amount]').attr('min', amt).val(amt);
+    });
 
 });
