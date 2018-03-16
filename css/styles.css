@@ -21,6 +21,12 @@ html {
     box-sizing: inherit;
 }
 
+body 
+{
+    position: relative;
+    height: 100%;
+}
+
 a {
     color: #22bd7a;
     text-decoration: none;
@@ -99,11 +105,8 @@ img.fill {
 html { font-size: 62.5%; }
 
 body {
-    position: relative;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
-    color: #333;
-    min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, .tabs__tab, .stat, .btn, .no-results {
@@ -212,7 +215,7 @@ p, td, th, li {
     margin-right: 1rem;
 }
   
-.media__body {
+.media__bdy {
     flex: 1;
 }
 
@@ -489,7 +492,8 @@ p, td, th, li {
     margin-left: .5rem;
 }
 
-html.modal-open {
+html.modal-open,
+html.modal-open body {
     overflow: hidden;
 }
 
@@ -504,6 +508,12 @@ form label {
     margin-bottom: 1rem;
 }
 
+form small {
+    color: rgba(0,0,0,.3);
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
 form input[type=text],
 form input[type=email],
 form input[type=number],
@@ -515,6 +525,10 @@ form select {
     border-radius: .5rem;
     padding: 1.5rem;
     width: 100%;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 form input[type=text]:invalid,
@@ -622,6 +636,10 @@ input:checked + .switch__slider:before {
     -webkit-transform: translateX(2rem);
     -ms-transform: translateX(2rem);
     transform: translateX(2rem);
+}
+
+input.dirty:invalid + .switch__slider {
+    background-color: #f03434;
 }
 
 /* Columns */
@@ -759,6 +777,7 @@ input:checked + .switch__slider:before {
 */
 
 body {
+    color: #333;
     background-color: #f8f8f8;
 }
 

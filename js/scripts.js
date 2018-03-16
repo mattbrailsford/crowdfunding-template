@@ -49,6 +49,14 @@ $(function(){
         $('.pledge__form input[name=amount]').attr('min', amt).val(amt);
     });
 
+    // Set default values on form reset
+    $('.pledge__form').on('reset', function () {
+        var form = this;
+        setTimeout(function () {
+            $(form).find('input.default-checked').prop('checked', true);
+        }, 1);
+    })
+
     // Little helper to track dirty inputs
     $('form input, form select, form textarea').on('blur valid invalid', function() {
         $(this).addClass('dirty');
@@ -58,6 +66,11 @@ $(function(){
         setTimeout(function (){ 
             $(form).find('.dirty').removeClass('dirty');
         }, 1)
+    })
+
+    // Track checkboxes that default to checked
+    $('input[checked]').each(function (idx, itm) {
+        $(itm).addClass('default-checked');
     })
 
 });
