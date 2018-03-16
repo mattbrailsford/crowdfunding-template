@@ -526,11 +526,6 @@ form select::-ms-expand {
     display: none;
 }
 
-form label input[type=checkbox] {
-    vertical-align: middle;
-    margin-right: .5rem;
-}
-
 .form__field {
     margin-bottom: 2rem;
 }
@@ -541,8 +536,57 @@ form fieldset {
     margin: 0;
 }
 
-form fieldset + fieldset{
+form fieldset + fieldset {
     margin-top: 3rem;
+}
+
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 3rem;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1.5rem;
+    background-color: rgba(0,0,0,.075);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch__slider:before {
+    position: absolute;
+    content: "";
+    height: 2.2rem;
+    width: 2.2rem;
+    left: .4rem;
+    bottom: .4rem;
+    border-radius: 1.1rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .switch__slider {
+    background-color: #22bd7a;
+}
+input:checked + .switch__slider:before {
+    -webkit-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    transform: translateX(2rem);
 }
 
 /* Columns */
