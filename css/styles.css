@@ -722,20 +722,7 @@ input:checked + .switch__slider:before {
 }
 
 .summary__progress {
-    position: relative;
-    display: block;
-    height: .5rem;
-    border-radius: .25rem;
-    background-color: rgba(0,0,0,.1);
     margin-bottom: 2rem;
-}
-
-.summary__progress span {
-    display: block;
-    height: .5rem;
-    border-radius: .25rem;
-    background-color: #22bd7a;
-    width: 50%;
 }
 
 .summary__meta {
@@ -745,6 +732,24 @@ input:checked + .switch__slider:before {
 .summary__heading,
 .summary__meta {
     color: #333;
+}
+
+/* Progress */ 
+.progress {
+    position: relative;
+    display: block;
+    height: .5rem;
+    border-radius: .25rem;
+    background-color: rgba(0,0,0,.1);
+    margin-bottom: 2rem;
+}
+
+.progress span {
+    display: block;
+    height: .5rem;
+    border-radius: .25rem;
+    background-color: #22bd7a;
+    width: 2%;
 }
 
 /* 
