@@ -28,6 +28,7 @@ $(function(){
         $('.modal').hide();
         // Reset the form
         $('.pledge__form')[0].reset()
+        $('.pledge__form .dirty').removeClass('dirty');
         // Show/hide form and thank you message
         $('.pledge__form').show();
         $('.pledge__thank-you').hide();
@@ -36,9 +37,12 @@ $(function(){
     // Handle pledge button click
     $('.pledge__submit').on('click', function (e) {
         e.preventDefault();
-        // TODO: Peform the pledge action
-        $('.pledge__form').hide();
-        $('.pledge__thank-you').show();
+        var formEl = $('.pledge__form')[0];
+        if (formEl.checkValidity()) {
+            // TODO: Peform the pledge action
+            $('.pledge__form').hide();
+            $('.pledge__thank-you').show();
+        }
     })
 
     // Listen for changes to reward dropdown and auto update amount field
@@ -46,6 +50,11 @@ $(function(){
         var opt = $(this).find('option[value="'+ $(this).val() + '"]');
         var amt = Number('0' + opt.data('amount'));
         $('.pledge__form input[name=amount]').attr('min', amt).val(amt);
+    });
+
+    // Little helper to track dirty inputs
+    $('form input, form select, form textarea').on('blur valid invalid', function() {
+        $(this).addClass('dirty');
     });
 
 });

@@ -510,6 +510,25 @@ form select {
     width: 100%;
 }
 
+form input[type=text]:invalid,
+form input[type=email]:invalid,
+form input[type=number]:invalid,
+form textarea.dirty:invalid {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+form input[type=text].dirty:invalid,
+form input[type=email].dirty:invalid,
+form input[type=number].dirty:invalid,
+form textarea.dirty:invalid {
+    border-color: #f03434;
+    -webkit-box-shadow: 0 0 0 1px #f03434;
+    -moz-box-shadow: 0 0 0 1px #f03434;
+    box-shadow: 0 0 0 1px #f03434;
+}
+
 form textarea {
     height: 15rem;
 }
